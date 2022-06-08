@@ -14,6 +14,8 @@ set expandtab
 set ignorecase
 set smartcase
 
+set encoding=UTF-8
+
 "MAPPING
 
 let g:mapleader = ','
@@ -24,10 +26,12 @@ nnoremap <leader>s :source /home/tomas/.config/nvim/init.vim<CR>
 
 nnoremap <leader>p :PlugInstall<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>r :NERDTreeRefreshRoot<CR>
 
 "PLUGINS
 
 call plug#begin()
+  Plug 'elkowar/yuck.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'scrooloose/nerdtree'
   Plug 'jiangmiao/auto-pairs'
@@ -35,6 +39,7 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'mattn/emmet-vim'
   Plug 'yggdroot/indentline'
+  Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 let g:tagalong_verbose = 1
